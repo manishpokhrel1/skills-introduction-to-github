@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/dami/wakeword/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

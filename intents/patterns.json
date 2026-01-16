@@ -1,0 +1,50 @@
+[
+	{
+		"id": "who_is",
+		"intent": "WHO_IS",
+		"pattern": "^(?:who is|who's|tell me about)\\s+(.+)$",
+		"example": "Who is Nikola Tesla"
+	},
+	{
+		"id": "what_is",
+		"intent": "WHAT_IS",
+		"pattern": "^(?:what is|what's|define)\\s+(.+)$",
+		"example": "What is gravity"
+	},
+	{
+		"id": "joke",
+		"intent": "JOKE",
+		"pattern": "(joke|tell me a joke|make me laugh)",
+		"example": "Tell me a joke"
+	},
+	{
+		"id": "news",
+		"intent": "NEWS",
+		"pattern": "(news|what's the news|top news)",
+		"example": "What's the news"
+	},
+	{
+		"id": "where_am_i",
+		"intent": "LOCATION",
+		"pattern": "where am i",
+		"example": "Where am I"
+	},
+	{
+		"id": "screen_context",
+		"intent": "SCREEN_CONTEXT",
+		"pattern": "what is this|what's this",
+		"example": "What is this"
+	},
+	{
+		"id": "call",
+		"intent": "CALL",
+		"pattern": "^call\\s+(.+)$",
+		"example": "Call Mom"
+	},
+	{
+		"id": "send_sms",
+		"intent": "SMS",
+		"pattern": "^(?:send sms to|send message to)\\s+(.+)$",
+		"example": "Send SMS to John"
+	}
+]

@@ -1,0 +1,4 @@
+C:/dami/wakeword/build/CMakeFiles/wakeword.dir
+C:/dami/wakeword/build/CMakeFiles/native_test.dir
+C:/dami/wakeword/build/CMakeFiles/ALL_BUILD.dir
+C:/dami/wakeword/build/CMakeFiles/ZERO_CHECK.dir

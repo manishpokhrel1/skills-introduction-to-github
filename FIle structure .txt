@@ -1,0 +1,126 @@
+dami/
+├── README.md
+├── LICENSE
+├── CHANGELOG.md
+├── .gitignore
+
+├── docs/
+│   ├── overview.md
+│   ├── architecture.md
+│   ├── wake_word.md
+│   ├── intent_system.md
+│   ├── automation.md
+│   ├── accessibility.md
+│   ├── permissions.md
+│   └── playstore_rules.md
+
+├── wakeword/                          # C++ WAKE WORD ENGINE
+│   ├── CMakeLists.txt
+│   ├── include/
+│   │   ├── audio_capture.h
+│   │   ├── mfcc.h
+│   │   ├── wake_detector.h
+│   │   └── config.h
+│   ├── src/
+│   │   ├── audio_capture.cpp
+│   │   ├── mfcc.cpp
+│   │   ├── wake_detector.cpp
+│   │   ├── model_weights.h
+│   │   └── utils.cpp
+│   ├── tests/
+│   │   ├── test_mfcc.cpp
+│   │   └── test_detector.cpp
+│   ├── example/
+│   │   └── wake_test_main.cpp
+│   └── README.md
+
+├── android/                           # ANDROID APP (KOTLIN)
+│   ├── build.gradle.kts
+│   ├── settings.gradle.kts
+│   ├── gradle.properties
+│   ├── app/
+│   │   ├── build.gradle.kts
+│   │   └── src/main/
+│   │       ├── AndroidManifest.xml
+│   │       ├── java/com/daami/
+│   │       │   ├── MainActivity.kt
+│   │       │   ├── damiService.kt          # Foreground service
+│   │       │   ├── WakeBridge.kt            # JNI bridge to C++
+│   │       │   ├── SpeechInput.kt
+│   │       │   ├── VoiceOutput.kt
+│   │       │
+│   │       │   ├── intent/
+│   │       │   │   ├── IntentType.kt
+│   │       │   │   ├── IntentRouter.kt
+│   │       │   │   └── IntentMatcher.kt
+│   │       │
+│   │       │   ├── actions/
+│   │       │   │   ├── CallAction.kt
+│   │       │   │   ├── SmsAction.kt
+│   │       │   │   ├── AppLaunchAction.kt
+│   │       │   │   └── SystemAction.kt
+│   │       │
+│   │       │   ├── automation/
+│   │       │   │   ├── AutomationEngine.kt
+│   │       │   │   ├── Trigger.kt
+│   │       │   │   └── Rule.kt
+│   │       │
+│   │       │   ├── context/
+│   │       │   │   ├── AccessibilityReader.kt
+│   │       │   │   ├── ScreenInterpreter.kt
+│   │       │   │   └── ContextState.kt
+│   │       │
+│   │       │   ├── knowledge/
+│   │       │   │   ├── WikiFetcher.kt
+│   │       │   │   ├── NewsFetcher.kt
+│   │       │   │   ├── JokeProvider.kt
+│   │       │   │   └── FactFormatter.kt
+│   │       │
+│   │       │   ├── location/
+│   │       │   │   ├── LocationService.kt
+│   │       │   │   └── GeoResolver.kt
+│   │       │
+│   │       │   ├── permissions/
+│   │       │   │   └── PermissionManager.kt
+│   │       │
+│   │       │   └── util/
+│   │       │       ├── Logger.kt
+│   │       │       └── TimeUtils.kt
+│   │       │
+│   │       ├── res/
+│   │       │   ├── layout/activity_main.xml
+│   │       │   ├── xml/accessibility_service.xml
+│   │       │   └── values/strings.xml
+│   │       └── assets/
+│   │           ├── intents.json
+│   │           ├── jokes.json
+│   │           ├── news_sources.json
+│   │           └── automation_defaults.json
+
+├── intents/
+│   ├── intent_types.md
+│   ├── examples.txt
+│   └── patterns.json
+
+├── automation/
+│   ├── triggers.json
+│   ├── actions.json
+│   └── rules.md
+
+├── data/
+│   ├── sample_commands.txt
+│   ├── test_locations.json
+│   └── demo_sessions.json
+
+├── tests/
+│   ├── android/
+│   │   ├── IntentRouterTest.kt
+│   │   └── AutomationTest.kt
+│   ├── native/
+│   │   └── wake_integration_test.cpp
+│   └── test_plan.md
+
+└── tools/
+    ├── audio_recorder.py
+    ├── mfcc_visualizer.py
+    └── rss_validator.py
