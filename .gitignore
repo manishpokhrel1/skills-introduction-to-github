@@ -1,6 +1,16 @@
 .gradle/
 /build/
+build/
 /.idea/
 *.iml
 /bin/
 /obj/
+*.exe
+*.obj
+*.tlog
+*.vcxproj
+*.vcxproj.filters
+*.slnx
+*.recipe
+CMakeCache.txt
+CMakeFiles/
