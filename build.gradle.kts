@@ -18,7 +18,8 @@ tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile::class.java).conf
 
 sourceSets {
     named("main") {
-        kotlin.srcDir("android-stubs/src/main/kotlin")
+        // Use a small JVM-friendly snapshot of the production code for unit tests.
+        kotlin.srcDir("jvm-main/src/main/kotlin")
     }
     named("test") {
         kotlin.srcDir("android/app/src/test/java")
